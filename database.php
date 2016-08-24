@@ -23,11 +23,12 @@ else {
 
 // Change database to "art"
 $conn->select_db($dbname);
-$num_rows=$conn->query("SELECT COUNT(*)
+$num_rows=$conn->query("SELECT *
 FROM information_schema.tables
 WHERE table_schema = '".$dbname."'
 AND table_name = '".$table."';");
-if(!$num_rows) {
+//var_dump ($num_rows);
+if(!$num_rows->num_rows) {
 	// sql to create table
 	$sql = "CREATE TABLE ".$table." (
 	id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,

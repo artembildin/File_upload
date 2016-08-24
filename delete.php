@@ -17,16 +17,17 @@ if ($conn->connect_error) {
 }
 $conn->select_db($dbname);
 // sql to delete a record
-$sql = "DELETE FROM storage WHERE name='". $file_name."';";   // id ???
+$sql = "DELETE FROM storage WHERE name='". $file_name."';";
 
 if ($conn->query($sql) === TRUE) {
+	// delete file from folder
     unlink($full_path);
-    echo "File deleted successfully". "<br>";
+    echo "File deleted successfully <br>";
 } else {
     echo "File deleting record: " . $conn->error;
 }
 
 $conn->close();
-echo '<a href="http://test1.ru/select.php">View files</a>'. "<br>";
-echo '<a href="http://test1.ru/index.html">Go to upload</a>'. "<br>";
+echo '<a href="http://test1.ru/select.php">View files</a> <br>';
+echo '<a href="http://test1.ru/index.html">Go to upload</a> <br>';
 ?>
