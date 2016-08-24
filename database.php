@@ -21,7 +21,7 @@ else {
     die("Creating database failed: " . $conn->error);
 }
 
-// Change database to "files"
+// Change database to "art"
 $conn->select_db($dbname);
 $num_rows=$conn->query("SELECT COUNT(*)
 FROM information_schema.tables
