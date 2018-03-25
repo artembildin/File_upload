@@ -1,8 +1,9 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "art";
+$username = "id5187012_root";
+$password = "VqeBizAmeQ";
+$dbname = "id5187012_art";
+$table = "storage";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -33,8 +34,8 @@ if ($result->num_rows > 0) {
 		foreach($row as $value){
 			echo '<td>' .$value. '</td>';
 		}
-		echo '<td>' .'<a href="http://test1.ru/download.php?download_file='.$row["name"].'">Download file</a>'. '</td>';
-		echo '<td>' .'<a href="http://test1.ru/delete.php?file_name='.$row["name"].'">Delete file</a>'. '</td>';
+		echo '<td>' .'<a href="http://test-file-loader.000webhostapp.com/download.php?download_file='.$row["name"].'">Download file</a>'. '</td>';
+		echo '<td>' .'<a href="http://test-file-loader.000webhostapp.com/delete.php?file_name='.$row["name"].'">Delete file</a>'. '</td>';
 		echo '</tr>';
 	}
 }
@@ -44,4 +45,5 @@ else {
 $conn->close();
 echo '</tr>';
 echo '</table>';
+echo '<a href="http://test-file-loader.000webhostapp.com/index.html">Go to upload</a> <br>';
 ?>

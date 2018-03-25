@@ -1,7 +1,7 @@
 <?php
 
-ignore_user_abort(true);
-set_time_limit(0); // disable the time limit for this script
+//ignore_user_abort(true);
+//set_time_limit(1); // disable the time limit for this script
 
 $path = "uploads/";
 

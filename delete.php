@@ -5,9 +5,10 @@ $file_name = filter_var($file_name, FILTER_SANITIZE_URL); // Remove (more) inval
 $full_path = $path.$file_name;
 
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "art";
+$username = "id5187012_root";
+$password = "VqeBizAmeQ";
+$dbname = "id5187012_art";
+$table = "storage";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -28,6 +29,6 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-echo '<a href="http://test1.ru/select.php">View files</a> <br>';
-echo '<a href="http://test1.ru/index.html">Go to upload</a> <br>';
+echo '<a href="http://test-file-loader.000webhostapp.com/select.php">View files</a> <br>';
+echo '<a href="http://test-file-loader.000webhostapp.com/index.html">Go to upload</a> <br>';
 ?>

@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "art";
+$username = "id5187012_root";
+$password = "VqeBizAmeQ";
+$dbname = "id5187012_art";
 $table = "storage";
 
 // Create connection
@@ -37,7 +37,8 @@ if(!$num_rows->num_rows) {
 	size FLOAT NOT NULL
 	)";
 
-	if ($conn->query($sql)=== TRUE) {		}
+	if ($conn->query($sql)=== TRUE) {
+		}
 	else{
 	    die("_Creating table failed: " . $conn->error);
 	}
