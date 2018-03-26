@@ -12,29 +12,26 @@ if(isset($_POST["submit"])) {
     else {
         echo "File is not an image. <br>";
         $uploadOk = 0;
-       exit('<a href="http://test-file-loader.000webhostapp.com/index.html">Go Back</a>');
-	}
+       	}
 }
 // Check if file already exists
 if (file_exists($file)) {
     echo "Sorry, file already exists. <br>";
     $uploadOk = 0;
-   exit('<a href="http://test-file-loader.000webhostapp.com/index.html">Go Back</a>');
+   
 }
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 5000000) {
     echo "Sorry, your file is too large. <br>";
     $uploadOk = 0;
-    exit('<a href="http://test-file-loader.000webhostapp.com/index.html">Go Back</a>');
-}
+    }
 // Allow certain file formats
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" && $imageFileType != "JPG" && $imageFileType != "PNG" && $imageFileType != "JPEG"
 && $imageFileType != "GIF") {
     echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed <br>";
     $uploadOk = 0;
-    exit('<a href="http://test-file-loader.000webhostapp.com/index.html">Go Back</a>');
-}
+    }
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
     echo "Sorry, your file was not uploaded." . "<br />";
