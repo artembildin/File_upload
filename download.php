@@ -1,8 +1,4 @@
 <?php
-
-//ignore_user_abort(true);
-//set_time_limit(1); // disable the time limit for this script
-
 $path = "uploads/";
 
 $dl_file = preg_replace("([^\w\s\d\-_~,;:\[\]\(\).]|[\.]{2,})", '', $_GET['download_file']); // simple file name validation
